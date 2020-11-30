@@ -18,9 +18,9 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	public UserDetailsService userDetailsService() {
 
-		UserDetails user1 = User.builder().username("user1").password(passwordEncoder().encode("pass_user1"))
+		UserDetails user1 = User.builder().username("omar").password(passwordEncoder().encode("pass_omar"))
 				.roles("USER").build();
-		UserDetails user2 = User.builder().username("user2").password(passwordEncoder().encode("pass_user2"))
+		UserDetails user2 = User.builder().username("juan").password(passwordEncoder().encode("pass_juan"))
 				.roles("USER").build();
 		return new InMemoryUserDetailsManager(user1, user2);
 	}
